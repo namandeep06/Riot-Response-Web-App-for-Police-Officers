@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        .traffic-light {
+            position: relative;
+            width: 100px;
+            height: 300px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .pole {
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            height: 150px;
+            background-color: #333;
+        }
+
+        .light {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            animation: flicker 0.5s infinite alternate;
+        }
+
+        .red {
+            background-color: #ff0000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .yellow {
+            background-color: #ffff00;
+            box-shadow: 0 0 20px #ffff00;
+        }
+
+        .green {
+            background-color: #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="traffic-light">
+        <div class="pole"></div>
+        <div class="light red"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+    </div>
+</body>
+
+</html>
